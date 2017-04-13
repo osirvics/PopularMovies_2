@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.android.popularmovies.adapter.MovieAdapter;
@@ -144,7 +145,13 @@ public class MainActivityFragment extends Fragment implements PaginationAdapterC
         } else {
             TheMoviedbApiService apiService =
                     getClient().create(TheMoviedbApiService.class);
-            Call<Movies> call = apiService.getMovies(BuildConfig.MOVIE_API_KEY, sortBy, currentPage);
+            Call<Movies> call;
+            if(sortBy.contains(Utility.DEESCENDING_POPULARITY)){
+                call = apiService.getPopularMovies(BuildConfig.MOVIE_API_KEY, currentPage);
+            }
+            else{
+                call = apiService.getTopRatedMovies(BuildConfig.MOVIE_API_KEY, currentPage);
+            }
             call.enqueue(new Callback<Movies>() {
                 @Override
                 public void onResponse(Call<Movies> call, Response<Movies> response) {
@@ -153,11 +160,15 @@ public class MainActivityFragment extends Fragment implements PaginationAdapterC
                         items = response.body();
                         movies =  new ArrayList<>();
                         movies= items.getResults();
+                        Toast.makeText(getActivity(), "size is " + movies.size(), Toast.LENGTH_SHORT).show();
                         populateGrid();
                         int totalCount = items.getTotalPages();
                         if(totalCount % PER_PAGE ==0)
                             TOTAL_PAGES = (totalCount/PER_PAGE);
                         else TOTAL_PAGES = (totalCount/PER_PAGE) + 1;
+                    }
+                    else{
+                        Toast.makeText(getActivity(), "errror", Toast.LENGTH_SHORT).show();
                     }
                 }
                 @Override
@@ -173,7 +184,13 @@ public class MainActivityFragment extends Fragment implements PaginationAdapterC
         pageLoadCount +=1;
         TheMoviedbApiService apiService =
                 TheMoviedbClient.getClient().create(TheMoviedbApiService.class);
-        Call<Movies> call = apiService.getMovies(BuildConfig.MOVIE_API_KEY,sortBy, currentPage);
+        Call<Movies> call;
+        if(sortBy.contains(Utility.DEESCENDING_POPULARITY)){
+            call = apiService.getPopularMovies(BuildConfig.MOVIE_API_KEY, currentPage);
+        }
+        else{
+            call = apiService.getTopRatedMovies(BuildConfig.MOVIE_API_KEY, currentPage);
+        }
         call.enqueue(new Callback<Movies>() {
             @Override
             public void onResponse(Call<Movies> call, Response<Movies> response) {

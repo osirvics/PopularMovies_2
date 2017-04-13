@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class TheMoviedbClient {
-    public static final String GITHUB_API_BASE_URL = "https://api.themoviedb.org/";
+    public static final String GITHUB_API_BASE_URL = "https://api.themoviedb.org/3/";
     private static Retrofit retrofit = null;
     public static Retrofit getClient() {
         if (retrofit==null) {
