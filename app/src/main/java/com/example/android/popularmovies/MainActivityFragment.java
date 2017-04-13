@@ -18,7 +18,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.android.popularmovies.adapter.MovieAdapter;
@@ -160,15 +159,11 @@ public class MainActivityFragment extends Fragment implements PaginationAdapterC
                         items = response.body();
                         movies =  new ArrayList<>();
                         movies= items.getResults();
-                        Toast.makeText(getActivity(), "size is " + movies.size(), Toast.LENGTH_SHORT).show();
                         populateGrid();
                         int totalCount = items.getTotalPages();
                         if(totalCount % PER_PAGE ==0)
                             TOTAL_PAGES = (totalCount/PER_PAGE);
                         else TOTAL_PAGES = (totalCount/PER_PAGE) + 1;
-                    }
-                    else{
-                        Toast.makeText(getActivity(), "errror", Toast.LENGTH_SHORT).show();
                     }
                 }
                 @Override
