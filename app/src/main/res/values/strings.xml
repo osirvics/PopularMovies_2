@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Popular Movies one</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Error Messages-->
+    <string name="error_msg">Sorry! Couldn\'t fetch movies :)</string>
+    <string name="btn_retry">RETRY</string>
+    <string name="error_msg_no_internet">No internet connection, Turn ON data or wifi</string>
+    <string name="error_msg_timeout">The server took too long to respond</string>
+    <string name="error_msg_unknown">An unexpected error occurred</string>
+    <string name="tap_to_reload">Tap to reload</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="error_header">Sorry! Couldn\'t fetch avatar</string>
+
+
+    <string name="menu_sort_by">Sort by</string>
+    <string name="sort_order_popularity">Most popular</string>
+    <string name="sort_order_rated">Top rated</string>
+</resources>
