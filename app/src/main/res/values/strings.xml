@@ -16,4 +16,8 @@
     <string name="menu_sort_by">Sort by</string>
     <string name="sort_order_popularity">Most popular</string>
     <string name="sort_order_rated">Top rated</string>
+
+
+    <!--Content Authority-->
+    <string name="content_authority">com.example.android.popularmovies</string>
 </resources>

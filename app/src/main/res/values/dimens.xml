@@ -4,7 +4,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="grid_item_spacing">2dp</dimen>
-
+    <dimen name="collapsing_toolbar_appbarheight">272dp</dimen>
     <dimen name="padding_mini">4dp</dimen>
     <dimen name="padding_small">8dp</dimen>
     <dimen name="padding_normal">16dp</dimen>

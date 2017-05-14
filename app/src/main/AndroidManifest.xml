@@ -29,6 +29,12 @@
                 android:value="com.example.android.popularmovies.MainActivity" />
 
         </activity>
+
+        <!-- Our ContentProvider -->
+        <provider
+            android:name=".data.MovieProvider"
+            android:authorities="@string/content_authority"
+            android:exported="false"/>
     </application>
 
 </manifest>

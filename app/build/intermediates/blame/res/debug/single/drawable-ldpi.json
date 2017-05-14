@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\rate_black.png",
+        "source": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\rate_black.png"
+    },
+    {
+        "merged": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_refresh_black_24dp.png",
+        "source": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_refresh_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_arrow_back.png",
+        "source": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_arrow_back.png"
+    }
+]

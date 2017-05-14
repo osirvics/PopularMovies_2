@@ -26,6 +26,7 @@ import com.example.android.popularmovies.api.PaginationAdapterCallback;
 import com.example.android.popularmovies.api.TheMoviedbApiService;
 import com.example.android.popularmovies.api.TheMoviedbClient;
 import com.example.android.popularmovies.model.Movies;
+import com.example.android.popularmovies.model.PersistData;
 import com.example.android.popularmovies.model.Results;
 
 import java.util.ArrayList;
@@ -164,6 +165,7 @@ public class MainActivityFragment extends Fragment implements PaginationAdapterC
                         if(totalCount % PER_PAGE ==0)
                             TOTAL_PAGES = (totalCount/PER_PAGE);
                         else TOTAL_PAGES = (totalCount/PER_PAGE) + 1;
+                        PersistData.cacheData(getActivity(), movies);
                     }
                 }
                 @Override

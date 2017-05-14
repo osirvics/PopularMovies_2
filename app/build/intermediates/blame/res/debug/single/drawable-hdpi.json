@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\rate_black.png",
+        "source": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\rate_black.png"
+    },
+    {
+        "merged": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_arrow_back.png",
+        "source": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_arrow_back.png"
+    },
+    {
+        "merged": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_date_range.png",
+        "source": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\src\\main\\res\\drawable-hdpi\\ic_date_range.png"
+    },
+    {
+        "merged": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_refresh_black_24dp.png",
+        "source": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_refresh_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_sort.png",
+        "source": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\src\\main\\res\\drawable-hdpi\\ic_action_sort.png"
+    },
+    {
+        "merged": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_star_border.png",
+        "source": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\src\\main\\res\\drawable-hdpi\\ic_star_border.png"
+    }
+]
