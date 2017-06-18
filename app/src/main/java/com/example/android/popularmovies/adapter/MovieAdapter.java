@@ -12,7 +12,6 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
@@ -75,13 +74,12 @@ public class MovieAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                 final MovieAdapterHolder userHolder = (MovieAdapterHolder) holder;
                 Results currentMovie = movies.get(position);
                 String posterPath = currentMovie.getPosterPath();
-                //Log.e("Mainactivity", "poster url: " + "http://image.tmdb.org/t/p/w185/" + posterPath);
                 glide.load("http://image.tmdb.org/t/p/w185/" + posterPath)
                         .placeholder(R.color.placeholder_grey_20)
                         //.override(480,400)
                         .centerCrop()
                         .crossFade()
-                        .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
                         .listener(new RequestListener<String, GlideDrawable>() {
                             @Override
                             public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
@@ -128,10 +126,10 @@ public class MovieAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     @Override
     public void onViewRecycled(RecyclerView.ViewHolder holder) {
         //super.onViewRecycled(holder);
-        if(holder instanceof MovieAdapterHolder){
+      /*  if(holder instanceof MovieAdapterHolder){
             final MovieAdapterHolder userholder = (MovieAdapterHolder) holder;
             Glide.clear(userholder.thumbnail);
-        }
+        }*/
     }
 
     public Results getItem(int position) {
@@ -164,9 +162,12 @@ public class MovieAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         }
     }
 
-    public void addLoadingFooter() {
+    public void addLoadingFooter(boolean shouldAddNewResult) {
         isLoadingAdded = true;
-        add(new Results());
+        if(shouldAddNewResult){
+            add(new Results());
+        }
+
     }
 
     public void removeLoadingFooter() {
@@ -179,6 +180,10 @@ public class MovieAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         }
     }
 
+    public void clearData(){
+        movies.clear();
+    }
+
 
     /**
      * Displays Pagination retry footer view along with appropriate errorMsg
@@ -188,7 +193,7 @@ public class MovieAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
      */
     public void showRetry(boolean show, @Nullable String errorMsg) {
         retryPageLoad = show;
-        notifyItemChanged(movies.size() - 1);
+       notifyItemChanged(movies.size() - 1);
         if (errorMsg != null) this.errorMsg = errorMsg;
     }
 

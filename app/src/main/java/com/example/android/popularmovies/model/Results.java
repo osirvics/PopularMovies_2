@@ -23,7 +23,17 @@ public class Results implements Parcelable {
     private boolean video;
     private double vote_average;
 
-    public Results(){
+//    public Results(int movieId, String movieTitle,String  moviePoster,
+//                   Double movieRatings, String movieReleasedate, String moviePlot ){
+//        this.id = movieId;
+//        this.title= movieTitle;
+//        this.poster_path = moviePoster;
+//        this.vote_average = movieRatings;
+//        this.release_date = movieReleasedate;
+//        this.overview = moviePlot;
+//    }
+    public Results (){
+
     }
 
     public String getPosterPath() {

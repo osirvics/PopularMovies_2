@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<integer name="gallery_columns">2</integer>-->
+    <dimen name="item_height">320dp</dimen>
+    <dimen name="collapsing_toolbar_appbarheight">400dp</dimen>
+    <item name="image_weight" type="dimen" format="float">0.65</item>
+    <item name="plot_weight" type="dimen" format="float">0.35</item>
+
+    <dimen name="horizontal_grid_width">160dp</dimen>
+    <dimen name="horizontal_grid_height">164dp</dimen>
+
+</resources>

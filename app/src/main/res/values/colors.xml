@@ -11,4 +11,7 @@
     <color name="background">#FFF5F5F5</color>
     <color name="window_background">#F1F1F1</color>
     <color name="white_1000_75">#05ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="card_background">#ff757575</color>
+
 </resources>

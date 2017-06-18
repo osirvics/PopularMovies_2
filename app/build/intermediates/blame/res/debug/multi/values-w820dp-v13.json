@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+        "outputFile": "C:\\Users\\Victor\\Documents\\Mine\\PopularMovies\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,70 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "C:\\Users\\Victor\\Documents\\Mine\\PopularMovies\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
                         "startOffset": 295,
                         "endColumn": 57,
                         "endOffset": 348
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 113,
+                    "endColumn": 63,
+                    "endOffset": 172
+                },
+                "from": {
+                    "file": "C:\\Users\\Victor\\Documents\\Mine\\PopularMovies\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 448,
+                        "endColumn": 63,
+                        "endOffset": 507
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 177,
+                    "endColumn": 43,
+                    "endOffset": 216
+                },
+                "from": {
+                    "file": "C:\\Users\\Victor\\Documents\\Mine\\PopularMovies\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 403,
+                        "endColumn": 43,
+                        "endOffset": 442
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 221,
+                    "endColumn": 47,
+                    "endOffset": 264
+                },
+                "from": {
+                    "file": "C:\\Users\\Victor\\Documents\\Mine\\PopularMovies\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 354,
+                        "endColumn": 47,
+                        "endOffset": 397
                     }
                 }
             }

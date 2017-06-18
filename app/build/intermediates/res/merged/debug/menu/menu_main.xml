@@ -22,6 +22,9 @@
                 <item
                     android:id="@+id/menu_sort_by_vote_average"
                     android:title="@string/sort_order_rated"/>
+                <item
+                    android:id="@+id/menu_sort_by_favorite"
+                    android:title="@string/sort_order_favorite"/>
             </group>
         </menu>
     </item>

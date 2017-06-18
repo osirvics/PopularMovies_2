@@ -1,15 +1,14 @@
 package com.example.android.popularmovies.adapter;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.android.popularmovies.R;
@@ -40,16 +39,8 @@ public class HorizontalVideoAdapter extends RecyclerView.Adapter<HorizontalVideo
     public void onBindViewHolder(HorizontalVideoHolder holder, int position) {
         Video currentVideo = video.get(position);
         String youtubeId = currentVideo.getSource();
-        Log.e("HoriAdapter", "Video ID : " + currentVideo.getSource());
-        String  youtubeUrl = "http://img.video.com/vi/" + youtubeId + "/mqdefault.jpg";
-        Log.e("HoriAdapter", "Video URL : " + youtubeUrl);
+        String  youtubeUrl = "http://img.youtube.com/vi/" + youtubeId + "/mqdefault.jpg";
         Glide.with(context).load(youtubeUrl).crossFade().centerCrop().into(holder.imageView);
-        holder.textView.setText(currentVideo.getName());
-        Log.e("HoriAdapter", "Name of trailer : " + currentVideo.getName());
-       // Log.e("HoriAdapter", "Size of trailer : " + currentVideo.getSize());
-        //Log.e("HoriAdapter", "Type of trailer : " + currentVideo.getType());
-
-
     }
 
     @Override
@@ -58,32 +49,32 @@ public class HorizontalVideoAdapter extends RecyclerView.Adapter<HorizontalVideo
     }
     public class HorizontalVideoHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView imageView;
-        TextView textView;
+       // TextView textView;
         public HorizontalVideoHolder(View itemView) {
             super(itemView);
             imageView = (ImageView)itemView.findViewById(R.id.trailer_image);
-            textView = (TextView)itemView.findViewById(R.id.trailer_name);
-            itemView.setOnClickListener(this);
-        }
+           /// textView = (TextView)itemView.findViewById(R.id.trailer_name);
+            itemView.setOnClickListener(this);         }
 
         @Override
         public void onClick(View v) {
             String videoId = video.get(getLayoutPosition()).getSource();
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.video:" + videoId));
+            watchYoutubeVideo(videoId);
+           /* Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.video:" + videoId));
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra("VIDEO_ID", videoId);
+            context.startActivity(intent);*/
+        }
+    }
+    private void watchYoutubeVideo(String id){
+        try{
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + id));
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
-
-//            private void watchYoutubeVideo(String id){
-//                try{
-//                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + id));
-//                    startActivity(intent);
-//                }catch (ActivityNotFoundException ex){
-//                    Intent intent=new Intent(Intent.ACTION_VIEW,
-//                            Uri.parse("http://www.youtube.com/watch?v="+id));
-//                    startActivity(intent);
-//                }
-//            }
+        }catch (ActivityNotFoundException ex){
+            Intent intent=new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://www.youtube.com/watch?v="+id));
+            context.startActivity(intent);
         }
     }
 }

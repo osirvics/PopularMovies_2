@@ -5,9 +5,31 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="grid_item_spacing">2dp</dimen>
     <dimen name="collapsing_toolbar_appbarheight">272dp</dimen>
+    <dimen name="padding_micro">2dp</dimen>
     <dimen name="padding_mini">4dp</dimen>
     <dimen name="padding_small">8dp</dimen>
     <dimen name="padding_normal">16dp</dimen>
     <dimen name="card_padding">60dp</dimen>
     <dimen name="padding_large">24dp</dimen>
+    <dimen name="card_margin">16dp</dimen>
+    <integer name="gallery_columns">2</integer>
+    <dimen name="item_height">220dp</dimen>
+    <dimen name="content_insert_start">72dp</dimen>
+    <dimen name="zero_card_value">0dp</dimen>
+    <dimen name="card_height">60dp</dimen>
+    <dimen name="bottom_sheet_height">350dp</dimen>
+    <dimen name="bottom_sheet_width">600dp</dimen>
+
+
+    <!--<float name="image_weight">5</float>-->
+    <!--<float name="plot_weight">5</float>-->
+
+    <item name="image_weight" type="dimen" format="float">0.5</item>
+    <item name="plot_weight" type="dimen" format="float">0.5</item>
+
+
+    <dimen name="horizontal_grid_width">104dp</dimen>
+    <dimen name="horizontal_grid_height">120dp</dimen>
+
+
 </resources>

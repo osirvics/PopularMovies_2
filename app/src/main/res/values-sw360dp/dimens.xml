@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="horizontal_grid_width">104dp</dimen>
+    <dimen name="horizontal_grid_height">120dp</dimen>
+    <item name="image_weight" type="dimen" format="float">0.5</item>
+    <item name="plot_weight" type="dimen" format="float">0.5</item>
+</resources>

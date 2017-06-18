@@ -1,18 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout-v21\\notification_template_icon_group.xml"
+        "merged": "C:\\Users\\Victor\\Documents\\Mine\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\Victor\\.android\\build-cache\\b06899c52dc9d4eea6709c76f91806c2c7d31465\\output\\res\\layout-v21\\notification_action.xml"
     },
     {
-        "merged": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout-v21\\notification_action_tombstone.xml"
+        "merged": "C:\\Users\\Victor\\Documents\\Mine\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\Victor\\.android\\build-cache\\b06899c52dc9d4eea6709c76f91806c2c7d31465\\output\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
-        "merged": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
-        "source": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout-v21\\notification_action.xml"
+        "merged": "C:\\Users\\Victor\\Documents\\Mine\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Victor\\.android\\build-cache\\b06899c52dc9d4eea6709c76f91806c2c7d31465\\output\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
-        "merged": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\Victor\\Documents\\Codelabs\\PopularMovies\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout-v21\\notification_template_custom_big.xml"
+        "merged": "C:\\Users\\Victor\\Documents\\Mine\\PopularMovies\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Victor\\.android\\build-cache\\b06899c52dc9d4eea6709c76f91806c2c7d31465\\output\\res\\layout-v21\\notification_template_custom_big.xml"
     }
 ]

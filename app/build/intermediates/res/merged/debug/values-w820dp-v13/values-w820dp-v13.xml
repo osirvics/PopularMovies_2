@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="collapsing_toolbar_appbarheight">400dp</dimen>
+    <dimen name="item_height">340dp</dimen>
+    <integer name="gallery_columns">4</integer>
 </resources>

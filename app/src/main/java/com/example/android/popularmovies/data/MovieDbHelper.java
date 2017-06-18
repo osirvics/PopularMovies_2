@@ -13,7 +13,7 @@ public class MovieDbHelper extends SQLiteOpenHelper {
    */
     public static final String DATABASE_NAME = "movie.db";
 
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 1;
 
     public MovieDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -49,9 +49,9 @@ public class MovieDbHelper extends SQLiteOpenHelper {
 
                         MovieEntry.COLUMN_PLOT   + " TEXT NOT NULL, "                    +
 
-                        MovieEntry.COLUMN_FAVORITE + " INTEGER NOT NULL "                    +
+                        MovieEntry.COLUMN_FAVORITE + " INTEGER NOT NULL, "                    +
 
-                ");";
+                        " UNIQUE (" + MovieEntry.COLUMN_MOVIE_ID + ") ON CONFLICT REPLACE);";
 
 
         //Second Table

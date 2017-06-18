@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="horizontal_grid_width">94dp</dimen>
+    <dimen name="horizontal_grid_height">100dp</dimen>
+
+    <dimen name="collapsing_toolbar_appbarheight">170dp</dimen>
+    <dimen name="bottom_sheet_height">300dp</dimen>
+    <dimen name="bottom_sheet_width">400dp</dimen>
+</resources>
