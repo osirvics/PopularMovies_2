@@ -20,13 +20,7 @@ public class PersistData {
 
    private static String TAG = "PersistData";
 
-    synchronized public static void cacheFavoriteMovie(Context context, Results data){
 
-    }
-
-    synchronized public static void cacheData(Context context, ArrayList<Results> data) {
-
-    }
 
     public static ContentValues[] getMovieContentValuesFromArray(Context context, ArrayList<Results> result)
             throws JSONException {
