@@ -431,19 +431,7 @@ public class MainActivityFragment extends Fragment implements PaginationAdapterC
                             showErrorView(new Throwable());
                             return null;
                         }
-                        //Log.e("PersistData", "Size of favorite cursor: " + cursor.getCount() );
-//                        try {
-//                            return  getActivity().getContentResolver().query(MovieContract.MovieEntry.CONTENT_URI,
-//                                    null,
-//                                    null,
-//                                    null, MovieEntry.COLUMN_RATINGS  + " DESC");
-//
-//                        } catch (Exception e) {
-//                            Log.e(TAG, "Failed to asynchronously load data.");
-//                            e.printStackTrace();
-//                            showErrorView(new Throwable());
-//                            return  null;
-//                        }
+
                     }
 
                     // deliverResult sends the result of the load, a Cursor, to the registered listener
