@@ -3,6 +3,7 @@ package com.example.android.popularmovies;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -33,6 +34,7 @@ import com.example.android.popularmovies.api.TheMoviedbApiService;
 import com.example.android.popularmovies.api.TheMoviedbClient;
 import com.example.android.popularmovies.data.MovieContract;
 import com.example.android.popularmovies.data.MovieContract.MovieEntry;
+import com.example.android.popularmovies.data.MovieDbHelper;
 import com.example.android.popularmovies.model.Movies;
 import com.example.android.popularmovies.model.PersistData;
 import com.example.android.popularmovies.model.Results;
@@ -71,6 +73,8 @@ public class MainActivityFragment extends Fragment implements PaginationAdapterC
     //Default movie sort order
     private String sortOrder = Utility.DEESCENDING_POPULARITY;
     private MainActivityFragment context;
+    private SQLiteDatabase mDb;
+
     View.OnClickListener retry = (new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -91,6 +95,10 @@ public class MainActivityFragment extends Fragment implements PaginationAdapterC
         context = this;
         btnRetry.setOnClickListener(retry);
         sortOrder = Utility.getSortOrder(getActivity());
+        MovieDbHelper dbHelper = new MovieDbHelper(getActivity());
+        mDb = dbHelper.getWritableDatabase();
+
+
         if (savedInstanceState != null) {
             movies = savedInstanceState.getParcelableArrayList(Utility.MOVIE_STATE_KEY);
         }
@@ -336,8 +344,6 @@ public class MainActivityFragment extends Fragment implements PaginationAdapterC
                 if (item.isChecked()) item.setChecked(false);
                 else item.setChecked(true);
                 return true;
-
-
         }
         return super.onOptionsItemSelected(item);
     }
@@ -379,10 +385,27 @@ public class MainActivityFragment extends Fragment implements PaginationAdapterC
                     @Override
                     public Cursor loadInBackground() {
                         try {
-                            return getActivity().getContentResolver().query(MovieContract.MovieEntry.CONTENT_URI,
+
+//                            return getActivity().getContentResolver().query(MovieContract.MovieEntry.CONTENT_URI,
+//                                    null,
+//                                    null,
+//                                    null, MovieEntry.COLUMN_RATINGS + " DESC");
+
+                            // Filter results WHERE "title" = 'My Title'
+                            String selection = MovieContract.MovieEntry.COLUMN_TITLE + " = ?";
+                            String[] selectionArgs = { "Logan" };
+
+                            return mDb.query(
+                                    MovieContract.MovieEntry.TABLE_NAME,
+                                    null,
+                                    selection,
+                                    selectionArgs,
                                     null,
                                     null,
-                                    null, MovieEntry.COLUMN_RATINGS + " DESC");
+                                    MovieEntry.COLUMN_RATINGS + " DESC"
+                            );
+
+
 
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -425,15 +448,14 @@ public class MainActivityFragment extends Fragment implements PaginationAdapterC
                                     null,
                                     null, MovieEntry.COLUMN_RELEASE_DATE);
 
+
                         } catch (Exception e) {
                             Log.e(TAG, "Failed to asynchronously load data.");
                             e.printStackTrace();
                             showErrorView(new Throwable());
                             return null;
                         }
-
                     }
-
                     // deliverResult sends the result of the load, a Cursor, to the registered listener
                     public void deliverResult(Cursor data) {
                         mFavoriteMovieData = data;
@@ -442,7 +464,6 @@ public class MainActivityFragment extends Fragment implements PaginationAdapterC
                 };
             default:
                 throw new RuntimeException("Loader Not Implemented: " + id);
-
         }
     }
 
@@ -455,6 +476,7 @@ public class MainActivityFragment extends Fragment implements PaginationAdapterC
                 return;
             }
         }
+        Log.e(TAG, "Size of cursor is: " + data.getCount());
         movieList = new ArrayList<>();
         movieList.clear();
         if (data != null && data.moveToFirst()) {

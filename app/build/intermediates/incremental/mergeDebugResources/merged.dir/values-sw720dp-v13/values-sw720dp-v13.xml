@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="collapsing_toolbar_appbarheight">400dp</dimen>
+    <dimen name="horizontal_grid_height">220dp</dimen>
+    <dimen name="horizontal_grid_width">204dp</dimen>
+    <dimen name="item_height">320dp</dimen>
+    <integer name="gallery_columns">4</integer>
+</resources>

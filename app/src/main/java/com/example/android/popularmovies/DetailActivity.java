@@ -103,10 +103,7 @@ public class DetailActivity extends AppCompatActivity {
         String id = String.valueOf(movie.getId());
         displayTrailers(id);
         loadReviews(id);
-
-
     }
-
 
     private void displayTrailers(String id) {
 //        if (items != null) {

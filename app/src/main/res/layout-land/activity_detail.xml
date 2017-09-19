@@ -270,7 +270,6 @@
         android:layout_height="@dimen/bottom_sheet_height"
         android:gravity="bottom|end"
         android:layout_gravity="right"
-
         android:background="@android:color/darker_gray"
         android:orientation="vertical"
         app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
